@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="SaveJSON|Win32">
+      <Configuration>SaveJSON</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="SaveJSON|x64">
+      <Configuration>SaveJSON</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8317228e-bf01-4cb6-af06-13dcee37de83}</ProjectGuid>
+    <RootNamespace>osu</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MusicGame</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXLIB_DIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXLIB_DIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXLIB_DIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXLIB_DIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXLIB_DIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXLIB_DIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_SAVEJSON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="class\AnimCurve\animCurve.cpp" />
+    <ClCompile Include="class\Common\Base\BaseData.cpp" />
+    <ClCompile Include="class\Common\Base\Draw\DrawBase.cpp" />
+    <ClCompile Include="class\Common\Base\GameCore.cpp" />
+    <ClCompile Include="class\Common\Base\GameObjBase.cpp" />
+    <ClCompile Include="class\Common\Base\SetUp\CreateSupport.cpp" />
+    <ClCompile Include="class\Common\Base\SetUp\SetUpGameObj.cpp" />
+    <ClCompile Include="class\Common\Base\Update\UpdateBase.cpp" />
+    <ClCompile Include="class\Common\osu\game\BackImage\BackImageDraw.cpp" />
+    <ClCompile Include="class\Common\osu\game\BackImage\BackImage.cpp" />
+    <ClCompile Include="class\Common\osu\game\Combo\ComboUpdate.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\DecisionDraw.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\HitAnim\DecisionHitAnim.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\HitAnim\HitAnimHold.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\Sound\DecisionCreateSound.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\Update\DecisionCheckHold.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionData.cpp" />
+    <ClCompile Include="class\Common\osu\game\HitObj\CreateNotes.cpp" />
+    <ClCompile Include="class\Common\osu\game\HitObj\NoteData.cpp" />
+    <ClCompile Include="class\Common\osu\game\HitObj\NotesUpdate.cpp" />
+    <ClCompile Include="class\Common\osu\game\Lane\LaneBox.cpp" />
+    <ClCompile Include="class\Common\osu\HistoryScore\HistoryScore.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\Func\Metadata\MetadataLoad.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\Func\TimingPoints\TimingPointsLoad.cpp" />
+    <ClCompile Include="class\Common\osu\Result\ResultData.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\ReelData.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Sound\ReelSoundLoad.cpp" />
+    <ClCompile Include="class\Common\osu\Select\SetUp\SetUpSelectScene.cpp" />
+    <ClCompile Include="class\Common\osu\Select\UI\SelectUI.cpp" />
+    <ClCompile Include="class\Common\osu\Select\UI\SelectUIDraw.cpp" />
+    <ClCompile Include="class\Common\osu\Skin\FolderSearch.cpp" />
+    <ClCompile Include="class\Common\osu\Skin\Image\LoadSkinImage.cpp" />
+    <ClCompile Include="class\Common\osu\Skin\Image\SkinImage.cpp" />
+    <ClCompile Include="class\Common\osu\Skin\Sound\LoadSkinSound.cpp" />
+    <ClCompile Include="class\Common\osu\Skin\Sound\SkinSound.cpp" />
+    <ClCompile Include="class\Common\osu\Title\BackImage\TitleBackImage.cpp" />
+    <ClCompile Include="class\Common\osu\Title\BackImage\TitleBackImageDraw.cpp" />
+    <ClCompile Include="class\Common\osu\Title\Cursor\TitleCursorUpdate.cpp" />
+    <ClCompile Include="class\Common\osu\Title\SetUp\SetUpTitleScene.cpp" />
+    <ClCompile Include="class\GameInstance.cpp" />
+    <ClCompile Include="class\Input\InputManager.cpp" />
+    <ClCompile Include="class\Input\Result\CreateResultInput.cpp" />
+    <ClCompile Include="class\Input\SpeedAdjust\CreateSpeedAdjustInput.cpp" />
+    <ClCompile Include="class\Input\Title\CreateTitleInput.cpp" />
+    <ClCompile Include="class\Scene\ChangeEffect\BackPoly.cpp" />
+    <ClCompile Include="class\Scene\ChangeEffect\ChangeEffect.cpp" />
+    <ClCompile Include="class\Scene\ChangeEffect\EffectPoly.cpp" />
+    <ClCompile Include="class\Scene\ChangeEffect\FrontPoly.cpp" />
+    <ClCompile Include="class\SoundVolume\Input\Create.cpp" />
+    <ClCompile Include="class\SoundWaveEffect\EqualizerEffect.cpp" />
+    <ClCompile Include="class\Timer\Game\GameClock.cpp" />
+    <ClCompile Include="class\Timer\LoopTimer.cpp" />
+    <ClCompile Include="class\Manager\ImageMng.cpp" />
+    <ClCompile Include="class\Manager\SceneManager.cpp" />
+    <ClCompile Include="class\Scene\BaseScene.cpp" />
+    <ClCompile Include="class\Scene\GameScene.cpp" />
+    <ClCompile Include="class\Scene\TestScene.cpp" />
+    <ClCompile Include="class\Common\osu\game\SideSpaceDivision.cpp" />
+    <ClCompile Include="class\Common\osu\game\Lane\Lane.cpp" />
+    <ClCompile Include="class\Common\osu\game\Lane\LaneDivision.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\DecisionBar.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionTransform.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\DecisionBarDraw.cpp" />
+    <ClCompile Include="class\Common\osu\LoadConfigData.cpp" />
+    <ClCompile Include="class\Common\osu\game\Lane\LaneLength.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\DecisionUpdate.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\Func\General\GeneralLoad.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\Func\Events\LoadEvent.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\Func\HitObj\HitObjLoad.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\Func\Difficulty\DifficultyLoad.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\Func\Load\DefaultOsuLoad.cpp" />
+    <ClCompile Include="class\Common\osu\game\Combo\Combo.cpp" />
+    <ClCompile Include="class\Common\osu\game\Lane\CreateLane.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\LightDraw.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Data\LoadReelData.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Draw\FolderDraw.cpp" />
+    <ClCompile Include="class\shaderDraw\DxShDraw.cpp" />
+    <ClCompile Include="class\Common\osu\game\Combo\ComboDraw.cpp" />
+    <ClCompile Include="class\Input\Game\CreateGameInput.cpp" />
+    <ClCompile Include="class\Input\Select\CreateSelectInput.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Data\Load\LoadFolder.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Data\Load\LoadList.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\HitAnim\HitAnimNormal.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\HitAnim\HitAnimBase.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\Update\DecisionChekNormal.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\Update\DecisionCheck.cpp" />
+    <ClCompile Include="class\Common\osu\Title\BackImage\GradationImage.cpp" />
+    <ClCompile Include="class\Common\osu\Title\BackImage\RotateDraw.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\Func\Score\CreateScoreMag.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\DecisionDraw\DecisionDrawInterface.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\DecisionDraw\DecisionDrawUp.cpp" />
+    <ClCompile Include="class\Common\osu\game\DecisionBar\DecisionDraw\DecisionDrawRePress.cpp" />
+    <ClCompile Include="class\Common\osu\game\UI\GameUI.cpp" />
+    <ClCompile Include="class\Common\osu\game\UI\GameUIDraw.cpp" />
+    <ClCompile Include="class\Common\osu\SpeedAdjust\Draw.cpp" />
+    <ClCompile Include="class\Common\osu\HistoryScore\HistoryScoreLoad.cpp" />
+    <ClCompile Include="class\Common\osu\HistoryScore\HistoryScoreSave.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\Func\OsuLoadBase.cpp" />
+    <ClCompile Include="class\Common\osu\LoadOsu\LoadOsuFile.cpp" />
+    <ClCompile Include="class\Common\osu\game\HitObj\Notes.cpp" />
+    <ClCompile Include="class\Common\osu\game\HitObj\NotesGenerate.cpp" />
+    <ClCompile Include="class\Common\osu\game\Lane\Draw\StraightLaneDraw.cpp" />
+    <ClCompile Include="class\Common\WindowSize.cpp" />
+    <ClCompile Include="class\Common\osu\game\HitObj\NotesDraw.cpp" />
+    <ClCompile Include="class\Common\osu\game\NoteSizeRatio.cpp" />
+    <ClCompile Include="class\Common\osu\game\HitObj\NotesMove.cpp" />
+    <ClCompile Include="class\Scene\SelectScene.cpp" />
+    <ClCompile Include="class\Common\osu\game\SetUp\SetUpGameScene.cpp" />
+    <ClCompile Include="class\Common\osu\game\Lane\Draw\ObliqueLaneDraw.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Reel.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\ReelDraw.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Data\SortReelData.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\ReelUpdate.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Sound\ReelSound.cpp" />
+    <ClCompile Include="class\Scene\ResultScene.cpp" />
+    <ClCompile Include="class\Common\osu\Result\SetUp\SetUpResultScene.cpp" />
+    <ClCompile Include="class\Common\osu\Result\Result.cpp" />
+    <ClCompile Include="class\Common\osu\Result\ResultDraw.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
+    </ClCompile>
+    <ClCompile Include="class\Common\osu\Result\ResultUpdate.cpp" />
+    <ClCompile Include="class\Common\osu\Result\ResultSharingData.cpp" />
+    <ClCompile Include="class\Scene\TitleScene.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Data\SaveReelData.cpp" />
+    <ClCompile Include="class\Timer\Game\WaitSound.cpp" />
+    <ClCompile Include="class\Common\osu\Title\TitleHed\TitleHed.cpp" />
+    <ClCompile Include="class\Common\osu\Title\TitleHed\TitleHedDraw.cpp" />
+    <ClCompile Include="class\RandSeed\RandSeed.cpp" />
+    <ClCompile Include="class\Common\osu\Title\TitleHed\TitleHedUpdate.cpp" />
+    <ClCompile Include="class\Common\osu\Title\Cursor\TitleCursor.cpp" />
+    <ClCompile Include="class\Common\osu\Title\Cursor\TitleCursorDraw.cpp" />
+    <ClCompile Include="class\Common\osu\game\Score\Score.cpp" />
+    <ClCompile Include="class\Common\osu\game\Score\ScoreDraw.cpp" />
+    <ClCompile Include="class\Scene\SpeedAdjustmentScene.cpp" />
+    <ClCompile Include="class\Common\osu\SpeedAdjust\SpeedAdjust.cpp" />
+    <ClCompile Include="class\Common\osu\SpeedAdjust\SetUp\SetUpSpeedAdjust.cpp" />
+    <ClCompile Include="class\Common\osu\SpeedAdjust\Update.cpp" />
+    <ClCompile Include="class\SoundVolume\SoundVolume.cpp" />
+    <ClCompile Include="class\Common\osu\Select\Reel\Draw\SelectScoreDraw.cpp" />
+    <ClCompile Include="_debug\_DebugConOut.cpp" />
+    <ClCompile Include="_debug\_DebugDispOut.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="class\AnimCurve\animCurve.h" />
+    <ClInclude Include="class\Common\Base\BaseData.h" />
+    <ClInclude Include="class\Common\Base\Draw\DrawBase.h" />
+    <ClInclude Include="class\Common\Base\GameCore.h" />
+    <ClInclude Include="class\Common\Base\GameObjBase.h" />
+    <ClInclude Include="class\Common\Base\SetUp\CreateSupport.h" />
+    <ClInclude Include="class\Common\Base\SetUp\SetUpGameObj.h" />
+    <ClInclude Include="class\Common\Base\Update\UpdateBase.h" />
+    <ClInclude Include="class\Common\osu\game\BackImage\BackImageDraw.h" />
+    <ClInclude Include="class\Common\osu\game\BackImage\BackImage.h" />
+    <ClInclude Include="class\Common\osu\ConfigData.h" />
+    <ClInclude Include="class\Common\osu\Difficulty.h" />
+    <ClInclude Include="class\Common\osu\game\Combo\ComboUpdate.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\CreateBarBoxData.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\HitAnim\DecisionHitAnim.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\HitAnim\HitAnimEnum.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\HitAnim\HitAnimHold.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\SetDrawEnum.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\Sound\DecisionCreateSound.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\Sound\HitSoundData.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\Update\DecisionCheckHold.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionData.h" />
+    <ClInclude Include="class\Common\osu\game\GameDrawIndex.h" />
+    <ClInclude Include="class\Common\osu\game\HitObj\CreateNotes.h" />
+    <ClInclude Include="class\Common\osu\game\HitObj\GetPriorTime.h" />
+    <ClInclude Include="class\Common\osu\game\HitObj\NotesUpdate.h" />
+    <ClInclude Include="class\Common\osu\game\Key\KeyData.h" />
+    <ClInclude Include="class\Common\osu\game\Lane\Draw\LaneDrawBase.h" />
+    <ClInclude Include="class\Common\osu\game\NoteSizeRatio.h" />
+    <ClInclude Include="class\Common\osu\HistoryScore\MakeScoreRank.h" />
+    <ClInclude Include="class\Common\osu\ScoreMagData.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Draw\HSVtoRGB.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Draw\RGBtoHSV.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\ReelAnimData.h" />
+    <ClInclude Include="class\Common\osu\Select\UI\SelectUI.h" />
+    <ClInclude Include="class\Common\osu\Select\UI\SelectUIDraw.h" />
+    <ClInclude Include="class\Common\osu\Skin\DefaultPath.h" />
+    <ClInclude Include="class\Common\osu\Skin\Sound\LoadSkinSound.h" />
+    <ClInclude Include="class\Common\osu\Skin\Sound\SkinSound.h" />
+    <ClInclude Include="class\Common\osu\Skin\Sound\SkinSoundData.h" />
+    <ClInclude Include="class\Common\osu\SpeedAdjust\DrawIndex.h" />
+    <ClInclude Include="class\Common\osu\TimingPointsData.h" />
+    <ClInclude Include="class\Common\osu\GeneralData.h" />
+    <ClInclude Include="class\Common\osu\EventsData.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\CreateNumString.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\Difficulty\DifficultyLoadFunc.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\Events\LoadEventFunc.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\General\GeneralLoadFunc.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\LoadFunc.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\HitObj\HitObjLoadFunc.h" />
+    <ClInclude Include="class\Common\osu\game\HitObj\NoteData.h" />
+    <ClInclude Include="class\Common\osu\game\Lane\LaneType.h" />
+    <ClInclude Include="class\Common\osu\HitObj.h" />
+    <ClInclude Include="class\Common\osu\LoadData.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\LoadSectionBase\LoadSectionBase.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\Metadata\MetadataLoad.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\Metadata\MetadataLoadFunc.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\OpunOsuFile.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\TimingPoints\TimingPointsLoad.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\TimingPoints\TimingPointsLoadFunc.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\OsuCheckVersion.h" />
+    <ClInclude Include="class\Common\osu\MetaData.h" />
+    <ClInclude Include="class\Common\osu\Result\ResultData.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Data\MusicListPath.h" />
+    <ClInclude Include="class\Common\osu\Select\SelectDrawIndex.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\ReelData.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Data\ReelSortType.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Sound\ReelSoundLoad.h" />
+    <ClInclude Include="class\Common\osu\Select\SetUp\SetUpSelectScene.h" />
+    <ClInclude Include="class\Common\osu\Skin\Image\LoadSkinImage.h" />
+    <ClInclude Include="class\Common\osu\Skin\Image\SkinImage.h" />
+    <ClInclude Include="class\Common\osu\Skin\Image\SkinImageData.h" />
+    <ClInclude Include="class\Common\osu\Title\BackImage\TitleBackImage.h" />
+    <ClInclude Include="class\Common\osu\Title\BackImage\TitleBackImageDraw.h" />
+    <ClInclude Include="class\Common\osu\Title\Cursor\CursorShareData.h" />
+    <ClInclude Include="class\Common\osu\Title\Cursor\TitleCursorUpdate.h" />
+    <ClInclude Include="class\Common\osu\Title\SetUp\SetUpTitleScene.h" />
+    <ClInclude Include="class\Common\osu\Title\TitleDrawIndex.h" />
+    <ClInclude Include="class\Common\template\RingBuffer.h" />
+    <ClInclude Include="class\Common\template\RingBufferItr.h" />
+    <ClInclude Include="class\Common\template\Vector2.h" />
+    <ClInclude Include="class\Common\template\Vector3.h" />
+    <ClInclude Include="class\GameInstance.h" />
+    <ClInclude Include="class\Input\BaseCreateInput.h" />
+    <ClInclude Include="class\Input\EnumCast.h" />
+    <ClInclude Include="class\Input\Game\GameSceneInputKey.h" />
+    <ClInclude Include="class\Input\InputManager.h" />
+    <ClInclude Include="class\Input\Result\CreateResultInput.h" />
+    <ClInclude Include="class\Input\Result\ResultSceneInputKey.h" />
+    <ClInclude Include="class\Input\Select\SelectSceneInput.h" />
+    <ClInclude Include="class\Input\SpeedAdjust\CreateSpeedAdjustInput.h" />
+    <ClInclude Include="class\Input\SpeedAdjust\SpeedAdjustInput.h" />
+    <ClInclude Include="class\Input\Title\CreateTitleInput.h" />
+    <ClInclude Include="class\Input\Title\TitleSceneInput.h" />
+    <ClInclude Include="class\JsonParam\IOJSON.h" />
+    <ClInclude Include="class\Scene\ChangeEffect\BackPoly.h" />
+    <ClInclude Include="class\Scene\ChangeEffect\ChangeEffect.h" />
+    <ClInclude Include="class\Scene\ChangeEffect\EffectPoly.h" />
+    <ClInclude Include="class\Scene\ChangeEffect\FrontPoly.h" />
+    <ClInclude Include="class\SoundVolume\Input\Create.h" />
+    <ClInclude Include="class\SoundVolume\Input\Enum.h" />
+    <ClInclude Include="class\SoundVolume\SoundType.h" />
+    <ClInclude Include="class\SoundWaveEffect\EqualizerEffect.h" />
+    <ClInclude Include="class\Timer\Game\GameClock.h" />
+    <ClInclude Include="class\Timer\LoopTimer.h" />
+    <ClInclude Include="class\Manager\ImageMng.h" />
+    <ClInclude Include="class\Manager\SceneManager.h" />
+    <ClInclude Include="class\Scene\BaseScene.h" />
+    <ClInclude Include="class\Scene\GameScene.h" />
+    <ClInclude Include="class\Scene\TestScene.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\OsuLoadBase.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\LoadOsuFile.h" />
+    <ClInclude Include="class\Common\osu\game\HitObj\Notes.h" />
+    <ClInclude Include="class\Common\osu\game\HitObj\NotesGenerate.h" />
+    <ClInclude Include="class\Common\osu\game\Lane\Draw\StraightLaneDraw.h" />
+    <ClInclude Include="class\Common\WindowSize.h" />
+    <ClInclude Include="class\Common\osu\game\SideSpaceDivision.h" />
+    <ClInclude Include="class\Common\osu\game\Lane\Lane.h" />
+    <ClInclude Include="class\Common\osu\game\Lane\LaneDivision.h" />
+    <ClInclude Include="class\Common\osu\game\Lane\LaneBox.h" />
+    <ClInclude Include="class\Common\osu\game\HitObj\NotesDraw.h" />
+    <ClInclude Include="class\Common\osu\game\HitObj\NotesMove.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\DecisionBar.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionTransform.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\DecisionBarDraw.h" />
+    <ClInclude Include="class\Common\osu\LoadConfigData.h" />
+    <ClInclude Include="class\Common\osu\game\Lane\LaneLength.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\DecisionUpdate.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\General\GeneralLoad.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\LoadSectionBase.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\Events\LoadEvent.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\HitObj\HitObjLoad.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\Difficulty\DifficultyLoad.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\Load\DefaultOsuLoad.h" />
+    <ClInclude Include="class\Scene\SelectScene.h" />
+    <ClInclude Include="class\Common\osu\game\Combo\Combo.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\DecisionDraw.h" />
+    <ClInclude Include="class\Common\osu\game\SetUp\SetUpGameScene.h" />
+    <ClInclude Include="class\Scene\UsingChangeSceneFunc.h" />
+    <ClInclude Include="class\shaderDraw\DxShDraw.h" />
+    <ClInclude Include="class\Timer\Timer.h" />
+    <ClInclude Include="class\Common\osu\game\Lane\CreateLane.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\LightDraw.h" />
+    <ClInclude Include="class\Common\osu\game\Lane\Draw\ObliqueLaneDraw.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Reel.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Data\LoadReelData.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\ReelDraw.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Data\SortReelData.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\ReelUpdate.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Sound\ReelSound.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Draw\FolderDraw.h" />
+    <ClInclude Include="class\Common\osu\game\Combo\ComboDraw.h" />
+    <ClInclude Include="class\Input\Game\CreateGameInput.h" />
+    <ClInclude Include="class\Input\Select\CreateSelectInput.h" />
+    <ClInclude Include="class\Scene\ResultScene.h" />
+    <ClInclude Include="class\Common\osu\Result\SetUp\SetUpResultScene.h" />
+    <ClInclude Include="class\Common\osu\Result\Result.h" />
+    <ClInclude Include="class\Common\osu\Result\ResultDraw.h" />
+    <ClInclude Include="class\Common\osu\Result\ResultUpdate.h" />
+    <ClInclude Include="class\Common\osu\Result\ResultSharingData.h" />
+    <ClInclude Include="class\Scene\TitleScene.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Data\SaveReelData.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Data\Load\LoadFolder.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Data\Load\LoadList.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\HitAnim\HitAnimNormal.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\HitAnim\HitAnimBase.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\Update\DecisionChekNormal.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\Update\DecisionCheck.h" />
+    <ClInclude Include="class\Timer\Game\WaitSound.h" />
+    <ClInclude Include="class\Common\osu\Skin\FolderSearch.h" />
+    <ClInclude Include="class\Common\osu\Title\TitleHed\TitleHed.h" />
+    <ClInclude Include="class\Common\osu\Title\TitleHed\TitleHedDraw.h" />
+    <ClInclude Include="class\RandSeed\RandSeed.h" />
+    <ClInclude Include="class\Common\osu\Title\TitleHed\TitleHedUpdate.h" />
+    <ClInclude Include="class\Common\osu\Title\BackImage\GradationImage.h" />
+    <ClInclude Include="class\Common\osu\Title\BackImage\RotateDraw.h" />
+    <ClInclude Include="class\Common\osu\Title\Cursor\TitleCursor.h" />
+    <ClInclude Include="class\Common\osu\Title\Cursor\TitleCursorDraw.h" />
+    <ClInclude Include="class\Common\osu\LoadOsu\Func\Score\CreateScoreMag.h" />
+    <ClInclude Include="class\Common\osu\game\Score\Score.h" />
+    <ClInclude Include="class\Common\osu\game\Score\ScoreDraw.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\DecisionDraw\DecisionDrawInterface.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\DecisionDraw\DecisionDrawUp.h" />
+    <ClInclude Include="class\Common\osu\game\DecisionBar\DecisionDraw\DecisionDrawRePress.h" />
+    <ClInclude Include="class\Common\osu\game\UI\GameUI.h" />
+    <ClInclude Include="class\Common\osu\game\UI\GameUIDraw.h" />
+    <ClInclude Include="class\Scene\SpeedAdjustmentScene.h" />
+    <ClInclude Include="class\Common\osu\SpeedAdjust\SpeedAdjust.h" />
+    <ClInclude Include="class\Common\osu\SpeedAdjust\SetUp\SetUpSpeedAdjust.h" />
+    <ClInclude Include="class\Common\osu\SpeedAdjust\Draw.h" />
+    <ClInclude Include="class\Common\osu\SpeedAdjust\Update.h" />
+    <ClInclude Include="class\Common\osu\HistoryScore\HistoryScore.h" />
+    <ClInclude Include="class\Common\osu\HistoryScore\HistoryScoreLoad.h" />
+    <ClInclude Include="class\Common\osu\HistoryScore\HistoryScoreSave.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="class\SoundVolume\SoundVolume.h" />
+    <ClInclude Include="class\Common\osu\Select\Reel\Draw\SelectScoreDraw.h" />
+    <ClInclude Include="_debug\_DebugConOut.h" />
+    <ClInclude Include="_debug\_DebugDispOut.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\shader\Cursor.pso" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="resource\shader\AdditiveColor.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="resource\shader\CoreThickness.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="resource\shader\DrawSelectCursor.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DisableOptimizations>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0_level_9_3</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="resource\shader\Gradation.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="resource\shader\MonoAddAlphaColor.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="resource\shader\MulColor.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="resource\shader\UVScroll.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='SaveJSON|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='SaveJSON|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(projectDir)resource/shader/%(Filename).pso</ObjectFileOutput>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MusicGame.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

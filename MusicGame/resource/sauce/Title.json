@@ -1,0 +1,66 @@
+{
+  "TitleLogo": {
+    "Image": "resource/skin/Default/title.png",
+    "BufferSize": 36,
+    "Color": [
+      {
+        "r": 255,
+        "g": 255,
+        "b": 0
+      },
+      {
+        "r": 0,
+        "g": 255,
+        "b": 255
+      }
+    ],
+    "Pos": {
+      "x": 227,
+      "y": 116
+    }
+  },
+  "Cursor": {
+    "Voice": "resource/skin/transition/gameStart.wav",
+    "Start": "resource/skin/transition/start.mp3",
+    "Image": "resource/skin/Default/pressToStart.png",
+    "Pos": {
+      "x": 384,
+      "y": 544
+    },
+    "ActiveTimeMs": 2000,
+    "NotActiveTimeMs": 1000
+  },
+  "BackImage": {
+    "StartPos": {
+      "x": 0,
+      "y": -768
+    },
+    "EndPos": {
+      "x": 878,
+      "y": 0
+    },
+    "StartColor": {
+      "r": 101,
+      "g": 96,
+      "b": 255
+    },
+    "EndColor": {
+      "r": 255,
+      "g": 255,
+      "b": 255
+    }
+  },
+  "RotateIcon": {
+    "MaxCnt": 12,
+    "WaitTime": 3,
+    "FolderPass": "resource/skin/Title/",
+    "SizeBtom": 50,
+    "ColorBtom": 100,
+    "Degree": 600,
+    "MoveVec": {
+      "x": 50,
+      "y": 30
+    }
+
+  }
+}
